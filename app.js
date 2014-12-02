@@ -1,16 +1,16 @@
-var fs 		= require('fs');
+var fs 	    = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
 
 // Battles to scrape
 var battles = [ "Battle_of_Edgehill", 
-				"Battle_of_Adwalton_Moor", 
-				"Battle_of_Marston_Moor",
-				"Battle_of_Naseby",
-				"Battle_of_Winceby",
-				"Battle_of_Lansdowne",
-				"Battle_of_Langport",
-				"Second_Battle_of_Newbury"];
+		"Battle_of_Adwalton_Moor", 
+		"Battle_of_Marston_Moor",
+		"Battle_of_Naseby",
+		"Battle_of_Winceby",
+		"Battle_of_Lansdowne",
+		"Battle_of_Langport",
+		"Second_Battle_of_Newbury"];
 
 var battlesData = [];
 
