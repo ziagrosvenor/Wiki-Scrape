@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Battle of Lansdowne",
+        "sideOne": "Parliamentarians",
+        "sideTwo": "Royalists",
+        "leaderOne": "William Waller",
+        "leaderTwo": "Ralph, Lord Hopton",
+        "outcome": "Pyrrhic Royalist victory"
+    },
+    {
+        "title": "Battle of Adwalton Moor",
+        "sideOne": "Royalists",
+        "sideTwo": "Parliamentarians",
+        "leaderOne": "Earl of Newcastle",
+        "leaderTwo": "Sir Thomas Fairfax",
+        "outcome": "Royalist Victory"
+    },
+    {
+        "title": "Battle of Edgehill",
+        "sideOne": "Royalists",
+        "sideTwo": "Parliamentarians",
+        "leaderOne": "Charles I of England",
+        "leaderTwo": "Earl of Essex",
+        "outcome": "Inconclusive"
+    },
+    {
+        "title": "Battle of Naseby",
+        "sideOne": "Parliamentarian",
+        "sideTwo": "Royalists",
+        "leaderOne": "Sir Thomas Fairfax",
+        "leaderTwo": "King Charles I",
+        "outcome": "Decisive Parliamentarian victory"
+    },
+    {
+        "title": "Second Battle of Newbury",
+        "sideOne": "Parliamentarians",
+        "sideTwo": "Royalists",
+        "leaderOne": "Earl of Essex",
+        "leaderTwo": "King Charles I",
+        "outcome": "Indecisive"
+    },
+    {
+        "title": "Battle of Marston Moor",
+        "sideOne": "Royalists",
+        "sideTwo": "Royalists",
+        "leaderOne": "Earl of Leven",
+        "leaderTwo": "Prince Rupert of the Rhine",
+        "outcome": "Decisive Parliamentarian and Scottish Covenanter victory"
+    },
+    {
+        "title": "Battle of Hopton Heath",
+        "sideOne": "Royalists",
+        "sideTwo": "Parliamentarians",
+        "leaderOne": "Spencer Compton, 2nd Earl of Northampton",
+        "leaderTwo": "Sir John Gell, 1st Baronet",
+        "outcome": "Both sides claimed victory"
+    },
+    {
+        "title": "Battle of Langport",
+        "sideOne": "Parliamentarians",
+        "sideTwo": "Royalists",
+        "leaderOne": "Sir Thomas Fairfax",
+        "leaderTwo": "George, Lord Goring",
+        "outcome": "Parliamentarian victory"
+    },
+    {
+        "title": "Battle of Turnham Green",
+        "sideOne": "Parliamentarians",
+        "sideTwo": "Royalists",
+        "leaderOne": "Earl of Essex",
+        "leaderTwo": "King Charles I",
+        "outcome": "Parliamentarian victory"
+    },
+    {
+        "title": "Battle of Torrington",
+        "sideOne": "Royalists",
+        "sideTwo": "Parliamentarians",
+        "leaderOne": "Sir Ralph Hopton",
+        "leaderTwo": "Sir Thomas Fairfax",
+        "outcome": "Parliament victory"
+    }
+]

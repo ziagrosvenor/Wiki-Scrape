@@ -3,15 +3,20 @@ var request = require('request');
 var cheerio = require('cheerio');
 
 // Battles to scrape
-var battles = [ "Battle_of_Edgehill", 
-		"Battle_of_Adwalton_Moor", 
-		"Battle_of_Marston_Moor",
-		"Battle_of_Naseby",
-		"Battle_of_Winceby",
-		"Battle_of_Lansdowne",
-		"Battle_of_Langport",
-		"Second_Battle_of_Newbury"];
+var battles = [ 
+	"Battle_of_Edgehill", 
+	"Battle_of_Marston_Moor",
+	"Battle_of_Naseby",
+	"Battle_of_Adwalton_Moor",
+	"Battle_of_Lansdowne",
+	"Battle_of_Langport",
+	"Second_Battle_of_Newbury",
+	"Battle_of_Hopton_Heath",
+	"Battle_of_Torrington",
+	"Battle_of_Turnham_Green"
+];
 
+var locationsData = [];
 var battlesData = [];
 
 for(var i = 0; i < battles.length; i++) {
@@ -40,24 +45,55 @@ for(var i = 0; i < battles.length; i++) {
 		var title = $("#firstHeading span").html();
 		var location = $(".location a").html();
 		var date = $("th[style] + td").html();
+
+		// Battle data
 		var outcome = $("tr:last-child th[style] + td").html();
+		var sideOne = $(".infobox tr:nth-child(6) td:first-child a").html();
+		var sideTwo = $(".infobox tr:nth-child(6) td:last-child a").html();
+		var leaderOne = $(".infobox tr:nth-child(8) td:first-child a").html();
+		var leaderTwo = $(".infobox tr:nth-child(8) td:last-child a").html();
+
+		// For pages with varying layouts
+		if(sideOne === null && sideTwo === null) {
+			sideOne = $(".infobox tr:nth-child(5) td:first-child a").html();
+			sideTwo = $(".infobox tr:nth-child(5) td:last-child a").html();
+		}
+		if(leaderOne === null && leaderTwo === null) {
+			leaderOne = $(".infobox tr:nth-child(7) td:first-child a").html();
+			leaderTwo = $(".infobox tr:nth-child(7) td:last-child a").html();
+		}
+		if(sideOne.indexOf("img") > 0) {
+			console.log('running');
+			var sideOne = $(".infobox tr:nth-child(6) td:nth-child(2) a").html();
+		}
 
 		// Assign values to an object
-		var battleData = {
+		var locationData = {
 			lat: lat,
 			lng: lng,
 			date: date,
+			location: location
+		};
+
+		var battleData = {
 			title: title,
-			location: location,
+			sideOne: sideOne,
+			sideTwo: sideTwo,
+			leaderOne: leaderOne,
+			leaderTwo: leaderTwo,
 			outcome: outcome
 		};
 
-		// Add the object to an array if battles
+		// pushes the objects into two arrays
+		locationsData.push(locationData);
 		battlesData.push(battleData);
 
 		// Saves data as a json file when all battles are scraped
 		if(battlesData.length === battles.length) {
-			saveFile(battlesData, "civil-war-battles");
+			saveFile(battlesData, "civil-war-battles-details");
+		}
+		if(locationsData.length === battles.length) {
+			saveFile(locationsData, "civil-war-battles-locations");
 		}
 	});
 }
